@@ -13,6 +13,7 @@ HK Chun, ScD - Senior Data Scientist with 16+ years of experience in:
 - MLOps & Cloud Architecture (Azure, Databricks)
 
 S. Tak, BA - Jr. Data Scientist
+- Major in P.Sci and Econ, Minor in CS @ Vandy
 
 ## 🛠️ Tech Stack
 - Pure HTML/CSS/JavaScript (No frameworks)
@@ -20,12 +21,11 @@ S. Tak, BA - Jr. Data Scientist
 - GitHub Pages Hosting
 
 ## 📧 Contact
-- Email: hkchun1@yahoo.com
 - LinkedIn: [heekyoung-chun-2110595](https://www.linkedin.com/in/heekyoung-chun-2110595/)
 - GitHub: [sechan9999](https://github.com/sechan9999)
 
 ## 📄 License
-© 2025 HeeKyoung Chun. All rights reserved.
+© 2025 HK Chun. All rights reserved.
 ```
 
 ## 3. .gitignore

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HeeKyoung Chun - Senior Data Scientist specializing in Healthcare Analytics, NLP, and MLOps">
+<meta name="keywords" content="Data Scientist, Healthcare Analytics, NLP, Machine Learning, Azure, Databricks">
+<meta name="author" content="HeeKyoung Chun">
+<title>HeeKyoung Chun | Data Scientist</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,sans-serif;background:#111827;color:#e5e7eb;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.nav{position:fixed;top:0;left:0;right:0;background:rgba(17,24,39,0.95);border-bottom:1px solid #374151;z-index:100;padding:16px 24px}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:20px;font-weight:700;color:#60a5fa}
+.nav-links{display:flex;gap:24px;font-size:14px}
+.nav-links a:hover{color:#60a5fa}
+.btn{background:#2563eb;padding:8px 16px;border-radius:8px;font-size:14px;cursor:pointer;border:none;color:white}
+.btn:hover{background:#1d4ed8}
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 24px 60px}
+.hero-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-sub{color:#60a5fa;font-weight:500;margin-bottom:8px}
+.hero h1{font-size:36px;font-weight:700;color:white;margin-bottom:16px;line-height:1.2}
+.hero h1 span{color:#60a5fa}
+.hero-desc{color:#9ca3af;margin-bottom:24px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-outline{background:transparent;border:1px solid #4b5563}
+.btn-outline:hover{background:#1f2937;border-color:#6b7280}
+.hero-social{display:flex;gap:16px;margin-top:24px}
+.hero-social a{color:#9ca3af;font-size:14px}
+.hero-social a:hover{color:white}
+.profile-circle{width:240px;height:240px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);display:flex;align-items:center;justify-content:center;font-size:80px;margin:0 auto}
+.section{padding:80px 24px}
+.section-alt{background:#1f2937}
+.section-title{font-size:28px;font-weight:700;color:white;text-align:center;margin-bottom:16px}
+.section-desc{color:#9ca3af;text-align:center;max-width:600px;margin:0 auto 48px}
+.container{max-width:1000px;margin:0 auto}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:24px}
+.tag{padding:8px 16px;border-radius:20px;font-size:14px}
+.tag-blue{background:rgba(37,99,235,0.2);color:#60a5fa}
+.tag-purple{background:rgba(139,92,246,0.2);color:#a78bfa}
+.tag-green{background:rgba(34,197,94,0.2);color:#4ade80}
+.tag-amber{background:rgba(245,158,11,0.2);color:#fbbf24}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skill-card{background:#111827;border:1px solid #374151;border-radius:12px;padding:20px}
+.skill-card h3{color:white;font-size:16px;margin-bottom:12px}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.skill-tag{background:#374151;padding:4px 10px;border-radius:4px;font-size:12px}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project-card{background:#111827;border:1px solid #374151;border-radius:12px;overflow:hidden}
+.project-card:hover{border-color:#4b5563}
+.project-thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:48px}
+.project-thumb.red{background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(249,115,22,0.2))}
+.project-thumb.purple{background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(236,72,153,0.2))}
+.project-thumb.blue{background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(6,182,212,0.2))}
+.project-thumb.green{background:linear-gradient(135deg,rgba(34,197,94,0.2),rgba(20,184,166,0.2))}
+.project-body{padding:16px}
+.project-body h3{color:white;font-size:16px;margin-bottom:8px}
+.project-body p{color:#9ca3af;font-size:14px}
+.timeline{border-left:2px solid #374151;padding-left:24px;max-width:700px;margin:0 auto}
+.timeline-item{position:relative;margin-bottom:32px}
+.timeline-dot{position:absolute;left:-30px;width:12px;height:12px;border-radius:50%}
+.timeline-dot.blue{background:#3b82f6}
+.timeline-dot.purple{background:#8b5cf6}
+.timeline-dot.green{background:#22c55e}
+.timeline-dot.amber{background:#f59e0b}
+.timeline-date{font-size:14px;font-weight:500}
+.timeline-date.blue{color:#60a5fa}
+.timeline-date.purple{color:#a78bfa}
+.timeline-date.green{color:#4ade80}
+.timeline-date.amber{color:#fbbf24}
+.timeline-item h3{color:white;font-size:18px}
+.timeline-item .company{color:#9ca3af;font-size:14px}
+.timeline-item .desc{color:#d1d5db;font-size:14px;margin-top:4px}
+.pub-card{background:#111827;border:1px solid #374151;border-radius:8px;padding:16px;margin-bottom:12px}
+.pub-card p{color:#d1d5db;font-size:14px}
+.pub-card .author{color:white;font-weight:500}
+footer{padding:24px;border-top:1px solid #374151;text-align:center}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:12px}
+.footer-links a{color:#6b7280;font-size:14px}
+.footer-links a:hover{color:white}
+.footer-copy{color:#4b5563;font-size:12px}
+.pub-card:hover{border-color:#60a5fa}
+.modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center}
+.modal.active{display:flex}
+.modal-box{background:#1f2937;border-radius:16px;padding:32px;max-width:480px;width:90%;max-height:90vh;overflow-y:auto;position:relative;border:1px solid #374151}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:#9ca3af;font-size:24px;cursor:pointer}
+.modal-close:hover{color:white}
+.modal-title{font-size:24px;font-weight:700;color:white;margin-bottom:8px}
+.modal-desc{color:#9ca3af;margin-bottom:24px}
+.form-input{width:100%;background:#374151;border:1px solid #4b5563;border-radius:8px;padding:12px;color:white;font-size:14px;margin-bottom:12px}
+.form-input:focus{outline:none;border-color:#3b82f6}
+.form-input::placeholder{color:#9ca3af}
+textarea.form-input{resize:none;min-height:100px}
+.social-row{display:flex;justify-content:center;gap:12px;margin-top:24px;padding-top:16px;border-top:1px solid #374151}
+.social-btn{width:40px;height:40px;background:#374151;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:bold}
+.social-btn:hover{background:#4b5563}
+.success-msg{text-align:center;padding:40px 0}
+.success-msg .icon{font-size:64px;margin-bottom:16px}
+.success-msg p{color:#4ade80;font-weight:500}
+.resume-box{background:white;border-radius:16px;padding:32px;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;color:#111827}
+.resume-header{text-align:center;border-bottom:2px solid #e5e7eb;padding-bottom:16px;margin-bottom:16px}
+.resume-header h1{font-size:24px;color:#111827}
+.resume-header p{color:#2563eb;font-size:14px}
+.resume-section{margin-bottom:16px}
+.resume-section h4{font-size:14px;font-weight:700;border-bottom:1px solid #e5e7eb;padding-bottom:4px;margin-bottom:8px}
+.resume-section p{font-size:13px;color:#4b5563}
+@media(max-width:768px){
+.hero-inner{grid-template-columns:1fr}
+.skills-grid{grid-template-columns:1fr}
+.projects-grid{grid-template-columns:1fr}
+.nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<div class="nav-inner">
+<span class="logo">HK.Chun</span>
+<div class="nav-links">
+<a href="javascript:void(0)" onclick="scrollToSection('about')">About</a>
+<a href="javascript:void(0)" onclick="scrollToSection('skills')">Skills</a>
+<a href="javascript:void(0)" onclick="scrollToSection('projects')">Projects</a>
+<a href="javascript:void(0)" onclick="scrollToSection('experience')">Experience</a>
+<a href="javascript:void(0)" onclick="openModal('contact')">Contact</a>
+</div>
+<button class="btn" onclick="openModal('contact')">Hire Me</button>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-inner">
+<div>
+<p class="hero-sub">Senior Data Scientist</p>
+<h1>Bridging <span>Healthcare Data</span> with Actionable Insights</h1>
+<p class="hero-desc">16+ years leading predictive modeling, causal inference, and NLP initiatives at CDC. Deploying end-to-end ML pipelines in Azure & Databricks.</p>
+<div class="hero-btns">
+<button class="btn" onclick="scrollToSection('projects')">View Projects</button>
+<button class="btn btn-outline" onclick="openModal('resume')">Resume PDF</button>
+</div>
+<div class="hero-social">
+<a href="https://www.linkedin.com/in/heekyoung-chun-2110595/" target="_blank">LinkedIn</a>
+<a href="https://github.com/sechan9999" target="_blank">GitHub</a>
+<a href="mailto:hkchun1@yahoo.com">Email</a>
+</div>
+</div>
+<div>
+<div class="profile-circle" style="overflow:hidden;padding:0;background:#1f2937"><img src="https://raw.githubusercontent.com/sechan9999/K21claude/refs/heads/main/HKphoto.jpg" alt="HeeKyoung Chun" width="240" height="240" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+</div>
+</div>
+</section>
+
+<section id="about" class="section">
+<div class="container" style="max-width:700px;text-align:center">
+<h2 class="section-title">About Me</h2>
+<p style="color:#d1d5db;margin-bottom:16px">Senior Data Scientist with a Doctor of Science degree and 16+ years transforming complex healthcare data into actionable insights at CDC.</p>
+<p style="color:#d1d5db">Bridging technical analysis and executive decision-making—translating statistical results into recommendations leadership can act on.</p>
+<div class="tags">
+<span class="tag tag-blue">ML Pipelines</span>
+<span class="tag tag-purple">Causal Inference</span>
+<span class="tag tag-green">Healthcare NLP</span>
+<span class="tag tag-amber">Communication</span>
+</div>
+</div>
+</section>
+
+<section id="skills" class="section section-alt">
+<div class="container">
+<h2 class="section-title">Technical Skills</h2>
+<div class="skills-grid">
+<div class="skill-card"><h3>Languages</h3><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">PySpark</span><span class="skill-tag">SQL</span><span class="skill-tag">R</span><span class="skill-tag">SAS</span></div></div>
+<div class="skill-card"><h3>NLP & AI/ML</h3><div class="skill-tags"><span class="skill-tag">HuggingFace</span><span class="skill-tag">Spark NLP</span><span class="skill-tag">PyTorch</span><span class="skill-tag">scikit-learn</span></div></div>
+<div class="skill-card"><h3>Cloud</h3><div class="skill-tags"><span class="skill-tag">Azure ML</span><span class="skill-tag">Databricks</span><span class="skill-tag">Data Lake</span><span class="skill-tag">Snowflake</span></div></div>
+<div class="skill-card"><h3>MLOps</h3><div class="skill-tags"><span class="skill-tag">CI/CD</span><span class="skill-tag">Versioning</span><span class="skill-tag">Monitoring</span><span class="skill-tag">MLflow</span></div></div>
+<div class="skill-card"><h3>Analytics</h3><div class="skill-tags"><span class="skill-tag">Causal Inference</span><span class="skill-tag">Predictive Modeling</span><span class="skill-tag">Experiment Design</span></div></div>
+<div class="skill-card"><h3>Certifications</h3><div class="skill-tags"><span class="skill-tag">Azure AI-900</span><span class="skill-tag">Azure DP-900</span><span class="skill-tag">Azure AZ-900</span></div></div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<div class="container">
+<h2 class="section-title">Featured Projects</h2>
+<p class="section-desc">COVID-19 response, NLP analytics, predictive modeling</p>
+<div class="projects-grid">
+<div class="project-card"><div class="project-thumb red">🦠</div><div class="project-body"><h3>COVID-19 Surveillance</h3><p>Predictive models and NLP for CDC surveillance data</p></div></div>
+<div class="project-card"><div class="project-thumb purple">📊</div><div class="project-body"><h3>NVDRS NLP Pipeline</h3><p>Entity extraction using Spark NLP</p></div></div>
+<div class="project-card"><div class="project-thumb blue">📈</div><div class="project-body"><h3>Medicaid Impact</h3><p>Propensity score models for policy analysis</p></div></div>
+<div class="project-card"><div class="project-thumb green">☁️</div><div class="project-body"><h3>Azure Data Pipeline</h3><p>CI/CD for reproducible ML workflows</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="experience" class="section section-alt">
+<div class="container">
+<h2 class="section-title">Experience</h2>
+<div class="timeline">
+<div class="timeline-item"><div class="timeline-dot blue"></div><p class="timeline-date blue">2022–2025</p><h3>Statistician / Data Scientist</h3><p class="company">CDC (DNI Contractor)</p><p class="desc">Lead predictive and causal models. Advanced NLP analyses.</p></div>
+<div class="timeline-item"><div class="timeline-dot purple"></div><p class="timeline-date purple">2019–2022</p><h3>Data Analyst</h3><p class="company">CDC (Goldbelt, TJFACT)</p><p class="desc">NVDRS and COVID-19 surveillance analytics.</p></div>
+<div class="timeline-item"><div class="timeline-dot green"></div><p class="timeline-date green">2008–2017</p><h3>Economist / Health Scientist</h3><p class="company">CDC, NIOSH</p><p class="desc">Cost-effectiveness modeling for prevention programs.</p></div>
+<div class="timeline-item"><div class="timeline-dot amber"></div><p class="timeline-date amber">2014–2020</p><h3>Adjunct Faculty</h3><p class="company">Georgia Southern University</p><p class="desc">Biostatistics and epidemiological modeling research.</p></div>
+</div>
+</div>
+</section>
+
+<section id="publications" class="section">
+<div class="container" style="max-width:700px">
+<h2 class="section-title">Publications</h2>
+<a href="https://doi.org/10.1111/josh.70038" target="_blank" class="pub-card" style="display:block;text-decoration:none;transition:border-color 0.2s">
+<p><span class="author">Chun H, et al. (2025)</span> "Evaluation of the Reliability and Validity of the Perceptions of Skills Enhanced Through School Health Education (PSE-SHE) Measure" – <span style="color:#60a5fa">Journal of School Health</span></p>
+<p style="color:#9ca3af;font-size:12px;margin-top:8px">doi.org/10.1111/josh.70038</p>
+</a>
+<a href="https://doi.org/10.1016/j.envpol.2019.113307" target="_blank" class="pub-card" style="display:block;text-decoration:none;transition:border-color 0.2s">
+<p><span class="author">Chun H, et al. (2020)</span> "Maternal exposure to air pollution and risk of Autism in children: A systematic review and meta-analyses" – <span style="color:#60a5fa">Environmental Pollution</span></p>
+<p style="color:#9ca3af;font-size:12px;margin-top:8px">doi.org/10.1016/j.envpol.2019.113307</p>
+</a>
+</div>
+</section>
+
+<footer>
+<div class="footer-links">
+<a href="https://www.linkedin.com/in/heekyoung-chun-2110595/" target="_blank">LinkedIn</a>
+<a href="https://github.com/sechan9999" target="_blank">GitHub</a>
+<a href="mailto:hkchun1@yahoo.com">Email</a>
+</div>
+<p class="footer-copy">© 2025 HeeKyoung Chun</p>
+</footer>
+
+<div id="contactModal" class="modal">
+<div class="modal-box">
+<button class="modal-close" onclick="closeModal('contact')">×</button>
+<h3 class="modal-title">Let's Connect</h3>
+<p class="modal-desc">Send me a message or reach out via social links.</p>
+<div id="contactForm">
+<input type="text" id="nameInput" class="form-input" placeholder="Your Name">
+<input type="email" id="emailInput" class="form-input" placeholder="Your Email">
+<textarea id="msgInput" class="form-input" placeholder="Your Message"></textarea>
+<button class="btn" style="width:100%" onclick="sendMessage()">Send Message</button>
+</div>
+<div id="contactSuccess" class="success-msg" style="display:none">
+<div class="icon">✅</div>
+<p>Message sent successfully!</p>
+</div>
+<div class="social-row">
+<a href="https://www.linkedin.com/in/heekyoung-chun-2110595/" target="_blank" class="social-btn">in</a>
+<a href="https://github.com/sechan9999" target="_blank" class="social-btn">GH</a>
+<a href="mailto:hkchun1@yahoo.com" class="social-btn">@</a>
+</div>
+</div>
+</div>
+
+<div id="resumeModal" class="modal">
+<div class="resume-box">
+<button class="modal-close" onclick="closeModal('resume')" style="color:#6b7280">×</button>
+<div class="resume-header">
+<h1>HeeKyoung Chun, ScD</h1>
+<p>Senior Data Scientist | Healthcare | NLP | MLOps</p>
+<p style="color:#6b7280;font-size:12px;margin-top:4px">hkchun1@yahoo.com</p>
+</div>
+<div class="resume-section"><h4>SUMMARY</h4><p>16+ years leading predictive and causal modeling in healthcare. Expert in Azure, Databricks, NLP, and MLOps.</p></div>
+<div class="resume-section"><h4>EXPERIENCE</h4><p><b>Statistician / Data Scientist</b> – CDC (2022–2025)</p><p><b>Data Analyst</b> – CDC (2019–2022)</p><p><b>Economist / Health Scientist</b> – CDC (2008–2017)</p></div>
+<div class="resume-section"><h4>EDUCATION</h4><p>Sc.D., Work Environment Policy – UMass Lowell</p><p>M.A., Economics – Boston University</p></div>
+<div class="resume-section"><h4>SKILLS</h4><p>Python, PySpark, SQL, R, SAS, HuggingFace, Spark NLP, Azure ML, Databricks, MLflow</p></div>
+<div class="resume-section"><h4>CERTIFICATIONS</h4><p>Azure AI-900, DP-900, AZ-900</p></div>
+<div style="text-align:center;margin-top:24px">
+<a href="mailto:hkchun1@yahoo.com?subject=Resume%20Request" class="btn">Request Full Resume</a>
+</div>
+</div>
+</div>
+
+<script>
+function scrollToSection(id){
+var el=document.getElementById(id);
+if(el){el.scrollIntoView({behavior:'smooth',block:'start'})}
+}
+function openModal(type){
+if(type==='contact'){document.getElementById('contactModal').classList.add('active')}
+if(type==='resume'){document.getElementById('resumeModal').classList.add('active')}
+}
+function closeModal(type){
+if(type==='contact'){
+document.getElementById('contactModal').classList.remove('active');
+document.getElementById('contactForm').style.display='block';
+document.getElementById('contactSuccess').style.display='none';
+}
+if(type==='resume'){document.getElementById('resumeModal').classList.remove('active')}
+}
+function sendMessage(){
+var n=document.getElementById('nameInput').value;
+var e=document.getElementById('emailInput').value;
+var m=document.getElementById('msgInput').value;
+if(n&&e&&m){
+document.getElementById('contactForm').style.display='none';
+document.getElementById('contactSuccess').style.display='block';
+setTimeout(function(){closeModal('contact');document.getElementById('nameInput').value='';document.getElementById('emailInput').value='';document.getElementById('msgInput').value=''},2000);
+}
+}
+document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeModal('contact')});
+document.getElementById('resumeModal').addEventListener('click',function(e){if(e.target===this)closeModal('resume')});
+</script>
+
+</body>
+</html>

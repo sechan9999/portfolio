@@ -17,7 +17,7 @@ S. Tak, BA - Jr. Data Scientist
 
 ## 🛠️ Tech Stack
 - Pure HTML/CSS/JavaScript (No frameworks)
-- Responsive Design
+- Responsive Design  https://claude.ai/public/artifacts/63cacfff-0867-4db1-8ec0-b87a9e19167e
 - GitHub Pages Hosting
 
 ## 📧 Contact

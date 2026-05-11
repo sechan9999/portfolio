@@ -234,12 +234,13 @@ textarea.form-input{resize:none;min-height:100px}
 <button class="modal-close" onclick="closeModal('contact')">×</button>
 <h3 class="modal-title">Let's Connect</h3>
 <p class="modal-desc">Send me a message or reach out via social links.</p>
-<div id="contactForm">
-<input type="text" id="nameInput" class="form-input" placeholder="Your Name">
-<input type="email" id="emailInput" class="form-input" placeholder="Your Email">
-<textarea id="msgInput" class="form-input" placeholder="Your Message"></textarea>
-<button class="btn" style="width:100%" onclick="sendMessage()">Send Message</button>
-</div>
+<form id="contactForm" action="https://formspree.io/f/mgodrgaz" method="POST" onsubmit="return sendMessage(event)">
+<input type="text" id="nameInput" name="name" class="form-input" placeholder="Your Name" required>
+<input type="email" id="emailInput" name="email" class="form-input" placeholder="Your Email" required>
+<textarea id="msgInput" name="message" class="form-input" placeholder="Your Message" required></textarea>
+<input type="hidden" name="_subject" value="Portfolio Hire Me inquiry">
+<button type="submit" class="btn" style="width:100%">Send Message</button>
+</form>
 <div id="contactSuccess" class="success-msg" style="display:none">
 <div class="icon">✅</div>
 <p>Message sent successfully!</p>
@@ -288,15 +289,31 @@ document.getElementById('contactSuccess').style.display='none';
 }
 if(type==='resume'){document.getElementById('resumeModal').classList.remove('active')}
 }
-function sendMessage(){
+function sendMessage(ev){
+if(ev&&ev.preventDefault)ev.preventDefault();
 var n=document.getElementById('nameInput').value;
 var e=document.getElementById('emailInput').value;
 var m=document.getElementById('msgInput').value;
-if(n&&e&&m){
+if(!(n&&e&&m))return false;
+var data=new FormData();
+data.append('name',n);
+data.append('email',e);
+data.append('message',m);
+data.append('_subject','Portfolio inquiry from '+n);
+fetch('https://formspree.io/f/mgodrgaz',{method:'POST',body:data,headers:{'Accept':'application/json'}})
+.then(function(r){if(r.ok){showSent()}else{mailtoFallback(n,e,m)}})
+.catch(function(){mailtoFallback(n,e,m)});
+return false;
+}
+function showSent(){
 document.getElementById('contactForm').style.display='none';
 document.getElementById('contactSuccess').style.display='block';
-setTimeout(function(){closeModal('contact');document.getElementById('nameInput').value='';document.getElementById('emailInput').value='';document.getElementById('msgInput').value=''},2000);
+setTimeout(function(){closeModal('contact');document.getElementById('nameInput').value='';document.getElementById('emailInput').value='';document.getElementById('msgInput').value=''},2500);
 }
+function mailtoFallback(n,e,m){
+var subject=encodeURIComponent('Portfolio inquiry from '+n);
+var body=encodeURIComponent('From: '+n+' <'+e+'>\n\n'+m);
+window.location.href='mailto:tcgyver@gmail.com?subject='+subject+'&body='+body;
 }
 document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeModal('contact')});
 document.getElementById('resumeModal').addEventListener('click',function(e){if(e.target===this)closeModal('resume')});

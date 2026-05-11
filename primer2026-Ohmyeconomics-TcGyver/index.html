@@ -127,7 +127,7 @@ textarea.form-input{resize:none;min-height:100px}
 <a href="javascript:void(0)" onclick="scrollToSection('experience')">Experience</a>
 <a href="javascript:void(0)" onclick="openModal('contact')">Contact</a>
 </div>
-<a class="btn" href="mailto:hkchun1@yahoo.com?subject=Hiring%20Inquiry%20-%20HeeKyoung%20Chun&body=Hello%20HeeKyoung%2C%0A%0A">Hire Me</a>
+<button class="btn" onclick="openModal('contact')">Hire Me</button>
 </div>
 </nav>
 
@@ -295,7 +295,7 @@ var m=document.getElementById('msgInput').value;
 if(n&&e&&m){
 var subject=encodeURIComponent('Portfolio inquiry from '+n);
 var body=encodeURIComponent('From: '+n+' <'+e+'>\n\n'+m);
-window.location.href='mailto:hkchun1@yahoo.com?subject='+subject+'&body='+body;
+window.location.href='mailto:tcgyver@gmail.com?subject='+subject+'&body='+body;
 document.getElementById('contactForm').style.display='none';
 document.getElementById('contactSuccess').style.display='block';
 setTimeout(function(){closeModal('contact');document.getElementById('nameInput').value='';document.getElementById('emailInput').value='';document.getElementById('msgInput').value=''},2000);

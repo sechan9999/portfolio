@@ -14,10 +14,10 @@ HK Chun, ScD - Senior Data Scientist with 16+ years of experience in:
 - MLOps & Cloud Architecture (Azure, Databricks)
 
 S. Tak, BA - Jr. Data Scientist
-- Major in P.Sci and Econ, Minor in CS @ Vandy
+- Major in P.Sci and Econ, Minor in CS @ Vanderbilt University
 
 ## 🛠️ Tech Stack
-- Pure HTML/CSS/JavaScript (No frameworks)
+- Python, SQL, SAS, R, HTML/CSS/JavaScript (No frameworks)
 - Responsive Design  https://claude.ai/public/artifacts/63cacfff-0867-4db1-8ec0-b87a9e19167e
 - GitHub Pages Hosting
 

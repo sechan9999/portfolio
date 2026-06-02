@@ -49,16 +49,31 @@ a{color:inherit;text-decoration:none}
 .skill-tags{display:flex;flex-wrap:wrap;gap:6px}
 .skill-tag{background:#374151;padding:4px 10px;border-radius:4px;font-size:12px}
 .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.project-card{background:#111827;border:1px solid #374151;border-radius:12px;overflow:hidden}
-.project-card:hover{border-color:#4b5563}
-.project-thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:48px}
+.project-card{background:#111827;border:1px solid #374151;border-radius:12px;overflow:hidden;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
+.project-card:hover{border-color:#3b82f6;transform:translateY(-3px);box-shadow:0 8px 24px rgba(59,130,246,0.15)}
+.project-card.featured{border-color:rgba(59,130,246,0.4);background:linear-gradient(135deg,#111827,#0d1f3c)}
+.project-card.featured:hover{border-color:#60a5fa;box-shadow:0 8px 32px rgba(96,165,250,0.2)}
+.project-thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative}
 .project-thumb.red{background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(249,115,22,0.2))}
 .project-thumb.purple{background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(236,72,153,0.2))}
 .project-thumb.blue{background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(6,182,212,0.2))}
 .project-thumb.green{background:linear-gradient(135deg,rgba(34,197,94,0.2),rgba(20,184,166,0.2))}
+.project-thumb.indigo{background:linear-gradient(135deg,rgba(99,102,241,0.25),rgba(168,85,247,0.25))}
+.project-thumb.teal{background:linear-gradient(135deg,rgba(20,184,166,0.25),rgba(16,185,129,0.25))}
+.project-thumb.orange{background:linear-gradient(135deg,rgba(249,115,22,0.25),rgba(234,179,8,0.25))}
 .project-body{padding:16px}
 .project-body h3{color:white;font-size:16px;margin-bottom:8px}
 .project-body p{color:#9ca3af;font-size:14px}
+.project-footer{display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding-top:12px;border-top:1px solid #1f2937}
+.project-tags{display:flex;gap:6px;flex-wrap:wrap}
+.project-tag{background:rgba(59,130,246,0.15);color:#93c5fd;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500}
+.project-tag.purple{background:rgba(139,92,246,0.15);color:#c4b5fd}
+.project-tag.green{background:rgba(34,197,94,0.15);color:#86efac}
+.project-tag.amber{background:rgba(245,158,11,0.15);color:#fcd34d}
+.project-link{display:inline-flex;align-items:center;gap:5px;color:#60a5fa;font-size:12px;font-weight:500;text-decoration:none;white-space:nowrap}
+.project-link:hover{color:#93c5fd}
+.project-link svg{flex-shrink:0}
+.badge-new{display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;margin-left:8px;vertical-align:middle;letter-spacing:0.5px}
 .timeline{border-left:2px solid #374151;padding-left:24px;max-width:700px;margin:0 auto}
 .timeline-item{position:relative;margin-bottom:32px}
 .timeline-dot{position:absolute;left:-30px;width:12px;height:12px;border-radius:50%}
@@ -173,9 +188,9 @@ textarea.form-input{resize:none;min-height:100px}
 <div class="skills-grid">
 <div class="skill-card"><h3>Languages</h3><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">PySpark</span><span class="skill-tag">SQL</span><span class="skill-tag">R</span><span class="skill-tag">SAS</span></div></div>
 <div class="skill-card"><h3>NLP & AI/ML</h3><div class="skill-tags"><span class="skill-tag">HuggingFace</span><span class="skill-tag">Spark NLP</span><span class="skill-tag">PyTorch</span><span class="skill-tag">scikit-learn</span></div></div>
+<div class="skill-card"><h3>Generative AI</h3><div class="skill-tags"><span class="skill-tag">RAG</span><span class="skill-tag">LLM Agents</span><span class="skill-tag">ChromaDB</span><span class="skill-tag">Ollama</span><span class="skill-tag">FastAPI</span><span class="skill-tag">RAGAS</span></div></div>
 <div class="skill-card"><h3>Cloud</h3><div class="skill-tags"><span class="skill-tag">Azure ML</span><span class="skill-tag">Databricks</span><span class="skill-tag">Data Lake</span><span class="skill-tag">Snowflake</span></div></div>
 <div class="skill-card"><h3>MLOps</h3><div class="skill-tags"><span class="skill-tag">CI/CD</span><span class="skill-tag">Versioning</span><span class="skill-tag">Monitoring</span><span class="skill-tag">MLflow</span></div></div>
-<div class="skill-card"><h3>Analytics</h3><div class="skill-tags"><span class="skill-tag">Causal Inference</span><span class="skill-tag">Predictive Modeling</span><span class="skill-tag">Experiment Design</span></div></div>
 <div class="skill-card"><h3>Certifications</h3><div class="skill-tags"><span class="skill-tag">Azure AI-900</span><span class="skill-tag">Azure DP-900</span><span class="skill-tag">Azure AZ-900</span></div></div>
 </div>
 </div>
@@ -184,13 +199,80 @@ textarea.form-input{resize:none;min-height:100px}
 <section id="projects" class="section">
 <div class="container">
 <h2 class="section-title">Featured Projects</h2>
-<p class="section-desc">COVID-19 response, NLP analytics, predictive modeling</p>
+<p class="section-desc">Healthcare analytics, RAG systems, AI agents, and podcast intelligence</p>
+
+<h3 style="color:#60a5fa;font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;text-align:center">AI / LLM Projects <span class="badge-new">NEW</span></h3>
+<div class="projects-grid" style="margin-bottom:32px">
+
+<div class="project-card featured">
+<div class="project-thumb indigo">🔍</div>
+<div class="project-body">
+<h3>Document Q&amp;A System</h3>
+<p>RAG pipeline: PDF ingestion into ChromaDB, hybrid BM25 + dense search with Reciprocal Rank Fusion, FastAPI backend, RAGAS evaluation on a synthetic golden dataset. Deployed via Docker / Cloud Run.</p>
+<div class="project-footer">
+<div class="project-tags">
+<span class="project-tag">RAG</span>
+<span class="project-tag purple">FastAPI</span>
+<span class="project-tag green">ChromaDB</span>
+<span class="project-tag amber">RAGAS</span>
+</div>
+<a href="https://github.com/sechan9999/ragas" target="_blank" class="project-link">
+<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+View on GitHub
+</a>
+</div>
+</div>
+</div>
+
+<div class="project-card featured">
+<div class="project-thumb teal">🤖</div>
+<div class="project-body">
+<h3>Research Agent</h3>
+<p>Autonomous LLM agent that plans multi-step research tasks, queries web sources, synthesizes findings, and generates structured reports with citations.</p>
+<div class="project-footer">
+<div class="project-tags">
+<span class="project-tag">LLM Agents</span>
+<span class="project-tag purple">Python</span>
+<span class="project-tag green">Ollama</span>
+</div>
+<a href="https://github.com/sechan9999/ResearhAgent" target="_blank" class="project-link">
+<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+View on GitHub
+</a>
+</div>
+</div>
+</div>
+
+<div class="project-card featured" style="grid-column:span 2">
+<div class="project-thumb orange" style="height:100px">🎙️</div>
+<div class="project-body">
+<h3>HKpodcast — AI Podcast Intelligence</h3>
+<p>Automated pipeline to transcribe, summarize, and surface insights from HK podcast episodes using speech-to-text and LLM summarization, enabling searchable audio knowledge bases.</p>
+<div class="project-footer">
+<div class="project-tags">
+<span class="project-tag">Speech-to-Text</span>
+<span class="project-tag purple">Summarization</span>
+<span class="project-tag green">NLP</span>
+<span class="project-tag amber">Audio AI</span>
+</div>
+<a href="https://github.com/sechan9999/HKpodcast" target="_blank" class="project-link">
+<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+View on GitHub
+</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<h3 style="color:#6b7280;font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;text-align:center">Healthcare &amp; Analytics</h3>
 <div class="projects-grid">
 <div class="project-card"><div class="project-thumb red">🦠</div><div class="project-body"><h3>COVID-19 Surveillance</h3><p>Predictive models and NLP for CDC surveillance data</p></div></div>
 <div class="project-card"><div class="project-thumb purple">📊</div><div class="project-body"><h3>NVDRS NLP Pipeline</h3><p>Entity extraction using Spark NLP</p></div></div>
 <div class="project-card"><div class="project-thumb blue">📈</div><div class="project-body"><h3>Medicaid Impact</h3><p>Propensity score models for policy analysis</p></div></div>
 <div class="project-card"><div class="project-thumb green">☁️</div><div class="project-body"><h3>Azure Data Pipeline</h3><p>CI/CD for reproducible ML workflows</p></div></div>
 </div>
+
 </div>
 </section>
 

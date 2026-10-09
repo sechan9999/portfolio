@@ -151,7 +151,7 @@ textarea.form-input{resize:none;min-height:100px}
 <div>
 <p class="hero-sub">Senior Data Scientist</p>
 <h1>Bridging <span>Healthcare Data</span> with Actionable Insights</h1>
-<p class="hero-desc">16+ years leading predictive modeling, causal inference, and NLP initiatives at CDC. Deploying end-to-end ML pipelines in Azure & Databricks.</p>
+<p class="hero-desc">17 years building and validating statistical models at CDC and NIOSH. Now building detection, credit-scoring and agentic AI systems at OhMy JNCTV on AWS, Snowflake and Databricks.</p>
 <div class="hero-btns">
 <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
 <button class="btn btn-outline" onclick="openModal('resume')">Resume PDF</button>
@@ -171,7 +171,7 @@ textarea.form-input{resize:none;min-height:100px}
 <section id="about" class="section">
 <div class="container" style="max-width:700px;text-align:center">
 <h2 class="section-title">About Me</h2>
-<p style="color:#d1d5db;margin-bottom:16px">Senior Data Scientist with a Doctor of Science degree and 16+ years transforming complex healthcare data into actionable insights at CDC.</p>
+<p style="color:#d1d5db;margin-bottom:16px">Senior Data Scientist with a Doctor of Science degree and 17 years transforming complex healthcare data into actionable insights at CDC and NIOSH, now applied to detection, scoring and agentic AI at OhMy JNCTV.</p>
 <p style="color:#d1d5db">Bridging technical analysis and executive decision-making—translating statistical results into recommendations leadership can act on.</p>
 <div class="tags">
 <span class="tag tag-blue">ML Pipelines</span>
@@ -189,8 +189,10 @@ textarea.form-input{resize:none;min-height:100px}
 <div class="skill-card"><h3>Languages</h3><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">PySpark</span><span class="skill-tag">SQL</span><span class="skill-tag">R</span><span class="skill-tag">SAS</span></div></div>
 <div class="skill-card"><h3>NLP & AI/ML</h3><div class="skill-tags"><span class="skill-tag">HuggingFace</span><span class="skill-tag">Spark NLP</span><span class="skill-tag">PyTorch</span><span class="skill-tag">scikit-learn</span></div></div>
 <div class="skill-card"><h3>Generative AI</h3><div class="skill-tags"><span class="skill-tag">RAG</span><span class="skill-tag">LLM Agents</span><span class="skill-tag">ChromaDB</span><span class="skill-tag">Ollama</span><span class="skill-tag">FastAPI</span><span class="skill-tag">RAGAS</span></div></div>
-<div class="skill-card"><h3>Cloud</h3><div class="skill-tags"><span class="skill-tag">Azure ML</span><span class="skill-tag">Databricks</span><span class="skill-tag">Data Lake</span><span class="skill-tag">Snowflake</span></div></div>
+<div class="skill-card"><h3>Cloud</h3><div class="skill-tags"><span class="skill-tag">Azure ML</span><span class="skill-tag">Databricks</span><span class="skill-tag">Data Lake</span><span class="skill-tag">Snowflake</span><span class="skill-tag">Snowflake Cortex</span><span class="skill-tag">AWS Bedrock</span><span class="skill-tag">Lambda</span><span class="skill-tag">SageMaker</span><span class="skill-tag">GCP Cloud Run</span></div></div>
 <div class="skill-card"><h3>MLOps</h3><div class="skill-tags"><span class="skill-tag">CI/CD</span><span class="skill-tag">Versioning</span><span class="skill-tag">Monitoring</span><span class="skill-tag">MLflow</span></div></div>
+<div class="skill-card"><h3>Detection &amp; Modeling</h3><div class="skill-tags"><span class="skill-tag">Anomaly Detection</span><span class="skill-tag">Change-Point Alerts</span><span class="skill-tag">XGBoost</span><span class="skill-tag">Calibration</span><span class="skill-tag">Survival Analysis</span></div></div>
+<div class="skill-card"><h3>BI &amp; Dashboards</h3><div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Streamlit</span><span class="skill-tag">Plotly</span><span class="skill-tag">Splunk</span></div></div>
 <div class="skill-card"><h3>Certifications</h3><div class="skill-tags"><span class="skill-tag">Azure AI-900</span><span class="skill-tag">Azure DP-900</span><span class="skill-tag">Azure AZ-900</span></div></div>
 </div>
 </div>
@@ -199,7 +201,7 @@ textarea.form-input{resize:none;min-height:100px}
 <section id="projects" class="section">
 <div class="container">
 <h2 class="section-title">Featured Projects</h2>
-<p class="section-desc">Healthcare analytics, RAG systems, AI agents, and podcast intelligence</p>
+<p class="section-desc">Detection and scoring systems, healthcare analytics, RAG systems and AI agents</p>
 
 <h3 style="color:#60a5fa;font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;text-align:center">AI / LLM Projects <span class="badge-new">NEW</span></h3>
 <div class="projects-grid" style="margin-bottom:32px">
@@ -265,6 +267,16 @@ View on GitHub
 
 </div>
 
+<h3 style="color:#60a5fa;font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;text-align:center">OhMy JNCTV — Detection &amp; Applied ML <span class="badge-new">NEW</span></h3>
+<div class="projects-grid" style="margin-bottom:32px">
+<div class="project-card featured"><div class="project-thumb blue">💳</div><div class="project-body"><h3>CreditAI — Credit Scoring</h3><p>End-to-end scoring pipeline with reject inference implemented three ways and scored against ground truth. Found and fixed four deployed defects, including a calibration bug that moved scores 45.6 points.</p><div class="project-footer"><div class="project-tags"><span class="project-tag">XGBoost</span><span class="project-tag purple">Calibration</span><span class="project-tag green">scikit-learn</span></div></div></div></div>
+<div class="project-card featured"><div class="project-thumb red">🚨</div><div class="project-body"><h3>Surveillance Alerting Pipeline</h3><p>Python port of a CDC production R/SAS pipeline: six-source weekly merge, change-point alert kept distinct from a magnitude threshold, completeness and cross-source reconciliation checks.</p><div class="project-footer"><div class="project-tags"><span class="project-tag">Change-Point</span><span class="project-tag purple">Rules Engine</span><span class="project-tag green">pandas</span></div></div></div></div>
+<div class="project-card featured"><div class="project-thumb indigo">🛰️</div><div class="project-body"><h3>LLMai — Observable AI Agent</h3><p>Local AI coding agent with Splunk cost, latency and DLP observability; detected anomalies trigger self-healing model-router re-weighting. 6th place, Splunk Dashboard Contest 2026.</p><div class="project-footer"><div class="project-tags"><span class="project-tag">Anomaly Detection</span><span class="project-tag purple">Splunk</span><span class="project-tag amber">LLM Agents</span></div></div></div></div>
+<div class="project-card featured"><div class="project-thumb teal">📉</div><div class="project-body"><h3>MacroPulse AI</h3><p>AWS-hosted MCP server exposing regime detection, Monte Carlo VaR and FOMC stress tests to Amazon Alexa+, backed by a 14-tab Streamlit dashboard.</p><div class="project-footer"><div class="project-tags"><span class="project-tag">MCP</span><span class="project-tag purple">AWS</span><span class="project-tag green">Streamlit</span></div></div></div></div>
+<div class="project-card featured"><div class="project-thumb green">❄️</div><div class="project-body"><h3>Snowflake Cortex Agent</h3><p>Rule engine for ICD-10→HCC mapping and NDC drug-interaction checks, paired with a tool-calling agent that acts on rule outputs.</p><div class="project-footer"><div class="project-tags"><span class="project-tag">Snowflake</span><span class="project-tag purple">HCC</span><span class="project-tag amber">Tool Calling</span></div></div></div></div>
+<div class="project-card featured"><div class="project-thumb orange">⚖️</div><div class="project-body"><h3>Multi-LLM Evaluation</h3><p>Multi-provider LLM layer on AWS Bedrock (Nova Pro, Converse API) and Gemini, with head-to-head scoring of latency and output quality on identical prompts.</p><div class="project-footer"><div class="project-tags"><span class="project-tag">Bedrock</span><span class="project-tag purple">Gemini</span><span class="project-tag green">LLM Eval</span></div></div></div></div>
+</div>
+
 <h3 style="color:#6b7280;font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;text-align:center">Healthcare &amp; Analytics</h3>
 <div class="projects-grid">
 <div class="project-card"><div class="project-thumb red">🦠</div><div class="project-body"><h3>COVID-19 Surveillance</h3><p>Predictive models and NLP for CDC surveillance data</p></div></div>
@@ -280,6 +292,7 @@ View on GitHub
 <div class="container">
 <h2 class="section-title">Experience</h2>
 <div class="timeline">
+<div class="timeline-item"><div class="timeline-dot amber"></div><p class="timeline-date amber">2025–Present</p><h3>Data Scientist</h3><p class="company">OhMy JNCTV</p><p class="desc">Detection and alerting pipelines, credit scoring with calibration QA, and agentic AI on AWS, Snowflake and Databricks.</p></div>
 <div class="timeline-item"><div class="timeline-dot blue"></div><p class="timeline-date blue">2022–2025</p><h3>Statistician / Data Scientist</h3><p class="company">CDC (DNI Contractor)</p><p class="desc">Lead predictive and causal models. Advanced NLP analyses.</p></div>
 <div class="timeline-item"><div class="timeline-dot purple"></div><p class="timeline-date purple">2019–2022</p><h3>Data Analyst</h3><p class="company">CDC (Goldbelt, TJFACT)</p><p class="desc">NVDRS and COVID-19 surveillance analytics.</p></div>
 <div class="timeline-item"><div class="timeline-dot green"></div><p class="timeline-date green">2008–2017</p><h3>Economist / Health Scientist</h3><p class="company">CDC, NIOSH</p><p class="desc">Cost-effectiveness modeling for prevention programs.</p></div>
@@ -308,7 +321,7 @@ View on GitHub
 <a href="https://github.com/sechan9999" target="_blank">GitHub</a>
 <a href="mailto:hkchun1@yahoo.com">Email</a>
 </div>
-<p class="footer-copy">© 2025 OhMyEconomics</p>
+<p class="footer-copy">© 2026 OhMyEconomics · OhMy JNCTV</p>
 </footer>
 
 <div id="contactModal" class="modal">
@@ -343,10 +356,10 @@ View on GitHub
 <p>Senior Data Scientist | Healthcare | NLP | MLOps</p>
 <p style="color:#6b7280;font-size:12px;margin-top:4px">hkchun1@yahoo.com</p>
 </div>
-<div class="resume-section"><h4>SUMMARY</h4><p>16+ years leading predictive and causal modeling in healthcare. Expert in Azure, Databricks, NLP, and MLOps.</p></div>
-<div class="resume-section"><h4>EXPERIENCE</h4><p><b>Statistician / Data Scientist</b> – CDC (2022–2025)</p><p><b>Data Analyst</b> – CDC (2019–2022)</p><p><b>Economist / Health Scientist</b> – CDC (2008–2017)</p></div>
+<div class="resume-section"><h4>SUMMARY</h4><p>17 years building and validating predictive, causal and detection models on large real-world data. Azure/Databricks, Snowflake, AWS, NLP, MLOps and agentic AI.</p></div>
+<div class="resume-section"><h4>EXPERIENCE</h4><p><b>Data Scientist</b> – OhMy JNCTV (2025–Present)</p><p><b>Statistician / Data Scientist</b> – CDC (2022–2025)</p><p><b>Data Analyst</b> – CDC (2019–2022)</p><p><b>Economist / Health Scientist</b> – CDC (2008–2017)</p></div>
 <div class="resume-section"><h4>EDUCATION</h4><p>Sc.D., Work Environment Policy – UMass Lowell</p><p>M.A., Economics – Boston University</p></div>
-<div class="resume-section"><h4>SKILLS</h4><p>Python, PySpark, SQL, R, SAS, HuggingFace, Spark NLP, Azure ML, Databricks, MLflow</p></div>
+<div class="resume-section"><h4>SKILLS</h4><p>Python, PySpark, SQL, R, SAS, XGBoost, HuggingFace, Spark NLP, Azure ML, Databricks, Snowflake, AWS Bedrock, Power BI, MLflow</p></div>
 <div class="resume-section"><h4>CERTIFICATIONS</h4><p>Azure AI-900, DP-900, AZ-900</p></div>
 <div style="text-align:center;margin-top:24px">
 <a href="mailto:hkchun1@yahoo.com?subject=Resume%20Request" class="btn">Request Full Resume</a>
